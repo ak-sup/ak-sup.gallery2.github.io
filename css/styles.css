@@ -1,0 +1,574 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, a, acronym, address, big, cite, code, del, dfn, em, img, 
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio,
+video {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup,
+menu, nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    width: 100%;
+    /*overflow: hidden;*/
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* My Site Styles*/
+
+body {
+    font-family: 'Helvetica', sans-serif;
+}
+
+/*NAVIGATION*/
+
+.site-title {
+    
+    float: left;
+    height: 40px;
+    margin: 20px 30px;
+    width: auto;
+}
+
+.navbar {
+    background-color: rgba(47, 51, 49, 0.80);
+    height: 75px;
+    left: 0;
+    padding: 0 5px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    max-width: 100%;
+}
+
+.navbar ul {
+    float: right;
+}
+
+.navbar li {
+    float: right;
+}
+
+
+
+.navbar li a {
+    color: rgb(181, 201, 67);
+    display: inline-block;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 30px 15px;
+    text-decoration: none;
+    transition: background .5s, color .5s;
+}
+
+.navbar a:hover {
+    background-color: rgba(181, 201, 67, 1.00);
+    color: rgba(47, 51, 49, 1.00);
+}
+
+.img-nav {
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+#fb-icon {
+    padding: 26px 20px;
+}
+
+/*HOME PAGE HERO*/
+
+.banner {
+    background-color: rgb(0, 0, 0);
+    background-image: url('../images/gallery_front.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: solid white 40px;
+    color: white;
+    height: 275px;
+    padding-top: 100px;
+    text-align: center;
+    width: 98.45%;
+}
+
+.banner img {
+    height: 150px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.banner h1 {
+    font-size: 50pt;
+    margin-top: 185px;
+    text-shadow: 3px 3px 6px #000000;
+}
+
+.menu img {
+    height: 200px;
+    width: 100%;
+}
+
+h1,
+h2 {
+    font-family: 'Abril Fatface';
+}
+
+h3,
+h4 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+}
+
+p, ul {
+    font-family: 'Helvetica';
+    font-weight: lighter;
+    font-size: 14px;
+    line-height: 16pt;
+}
+
+li, ul {
+    line-height: 16pt;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*grid for image menu below hero image on index page*/
+
+.grid {
+    /*clear: both;*/
+    list-style: none;
+    margin: auto;
+    max-width: 1000px;
+    padding: 5px 0 10px;
+    position: relative;
+    text-align: center;
+}
+
+.grid figure {
+    
+    float: left;
+    margin: 10px 1%;
+    max-height: 300px;
+    max-width: 300px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 48%;
+}
+
+.grid figure img {
+    opacity: 0.8;
+    display: block;
+    max-width: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+.grid figure figcaption {
+    /*-webkit-backface-visibility: hidden;*/
+    /*backface-visibility: hidden;*/
+    color: #fff;
+    font-size: 30px;
+    margin: auto;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/*image menu with effects*/
+
+figure.effect-home {
+    background: rgb(47, 51, 49);
+}
+
+figure.effect-home img {
+    /*-webkit-transition: opacity 0.35s;*/
+    /*opacity: 0.7;*/
+    transition: opacity 0.35s;
+}
+
+figure.effect-home:hover img {
+    opacity: 0.4;
+}
+
+figure.effect-home figcaption::before,
+figure.effect-home figcaption::after {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    bottom: 10px;
+    content: '';
+    left: 10px;
+    opacity: 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-home figcaption::before {
+    -webkit-transform: scale(0, 1);
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    transform: scale(0, 1);
+}
+
+figure.effect-home figcaption::after {
+    -webkit-transform: scale(1, 0);
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: scale(1, 0);
+}
+
+figure.effect-home h2 {
+    -webkit-transform: translate3d(0, -20px, 0);
+    -webkit-transition: -webkit-transform 0.35s;
+    padding-top: 30%;
+    transform: translate3d(0, -20px, 0);
+    transition: transform 0.35s;
+}
+
+figure.effect-home p {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    /*-webkit-transform: translate3d(0,20px,0);*/
+    /*transform: translate3d(0,20px,0);*/
+    opacity: 0;
+    padding: 20px;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-home:hover figcaption::before,
+figure.effect-home:hover figcaption::after {
+    -webkit-transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
+}
+
+figure.effect-home:hover h2,
+figure.effect-home:hover p {
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+/*internal page header*/
+
+.internal {
+    font-size: 25pt;
+    margin: auto;
+    padding-top: 95px;
+    /*margin-top: 75px;*/
+    color: rgb(181,201,67);
+}
+
+.internaltext {
+    white-space: nowrap;
+    display: block;
+    margin: auto;
+}
+
+.top {
+    margin: auto;
+    padding: 10pt;
+}
+
+/*program details pages*/
+
+.classdetails {
+    width: 80%;
+    margin: auto;
+}
+
+.instructor {
+    float: left;
+    height: 150px;
+    margin-right: 15px;
+}
+
+.classexample {
+    height: 200px;
+    margin-right: 15px;
+}
+
+.classdescription {
+    line-height: 16pt;
+}
+
+/*exhibitions page*/
+
+.exhibitabout {
+    width: 80%;
+    display: table;
+}
+
+.exhibitabout2 {
+    display: table-row;
+}
+
+
+/*index page bottom div*/
+
+.slogan {
+    clear: both;
+    margin-top: 300px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+.slogan h1 {
+    color: rgb(181, 201, 67);
+    font-size: 28pt;
+}
+
+.slogan p {
+    color: rgb(181, 201, 67);
+    font-size: 16pt;
+    line-height: 150%;
+}
+
+
+/*become a member page and login forms*/
+
+.member {
+    width: 55%;
+    background-color: rgb(147,151,149);
+    vertical-align: middle;
+    margin: auto;
+
+}
+
+input[type=text],
+select {
+    border-radius: 2px;
+    border: 2px solid #798c10;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 8px 0;
+    padding: 12px 20px;
+    width: 100%;
+}
+
+input[type=submit] {
+    background-color: rgb(181,201,67);
+    font-weight: bold;
+    font-size: 12pt;
+    border: none;
+    color: rgb(47,51,49);
+    cursor: pointer;
+    margin: 8px 0;
+    padding: 14px 20px;
+    width: 50%;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(107,111,109);
+    color: rgb(201,221,87);
+}
+
+div {
+    padding: 15px;
+}
+/*button for headers on interior pages*/
+
+button {
+    background-color: rgb(181,201,67);
+    border: solid white 5px;
+    color: rgb(47,51,49);
+    padding: 15px 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.headerbtn {
+    float: right;
+    vertical-align: top;
+}
+
+.headerbtn:hover {
+    background-color: rgb(107,111,109);
+    color: rgb(201,221,87);
+}
+
+.aboutbtn {
+    float: left;
+    display: block;
+    width: 100%;
+
+}
+
+.aboutbtn:hover {
+    background-color: rgb(107,111,109);
+    color: rgb(201,221,87);
+}
+
+/*become a member*/
+.pricing {
+    /*padding*/: 5px;
+    height: 20px;
+    column-width: 40px;
+}
+
+.pricingtr tr{
+    /*height: 20px;*/
+    /*column-width: 50px;*/
+}
+
+/*about page*/
+
+.about {
+    width: 70%;
+    float: right;
+}
+
+.about_menu {
+    width: 25%;
+    position: absolute;
+}
+
+.directors {
+    width: 45%;
+    float: left;
+    padding-top: 40px;
+}
+
+.meetings {
+    width: 45%;
+    float: right;
+    padding-top: 40px;
+}
+/*Members and Programs Pages*/
+
+table {
+    width: 70%;
+    margin: auto;
+}
+
+.rates {
+    table-layout: auto;
+    /*margin-left: 0;*/
+    margin: auto;
+    min-width: 30%;
+    max-width: 40%;
+}
+
+.ratesh3 {
+    text-align: left;
+    color: rgb(181,201,67);
+}
+.pricing {
+    text-align: left;
+    width: 100px;
+    /*outline: solid black 1px;*/
+    /*column-width: 25px;*/
+}
+
+.pricingtr {
+    column-width: 30px;
+    outline: solid rgba(42,42,42,.09) 1px;
+}
+
+td {
+    padding:5px;
+    height: 150px;
+}
+
+tr {
+
+}
+
+.timg {
+    column-width: 20%;
+    vertical-align: top;
+}
+
+.ttext {
+    column-width: 60%;
+    height: 150px;
+    vertical-align: top;
+    text-align: left;
+
+}
+
+.footer {
+    background-color: rgba(47, 51, 49, .8);
+    bottom: 0;
+    color: rgb(181, 201, 67);
+    height: 55px;
+    left: 0;
+    margin: auto;
+    right: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+.footer  {
+    padding-bottom: 50px; 
+}
